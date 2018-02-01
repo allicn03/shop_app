@@ -1,12 +1,21 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+body {
+  margin: 0;
+}
 h1 {
   color: gray;
   font-family: Helvetica, sans-serif;
   text-align: center;
   margin-top: 50px;
+}
+h2 {
+  text-align: center;
+  color: green;
+}
+.img-responsive {
+  margin-left: 400px;
 }
 .navbar {
   width: 100%;
@@ -17,7 +26,7 @@ h1 {
   width: 25%;
 }
 .nav-right ul {
-  margin-left: 754px;
+  margin-left: 790px;
   margin-top: 16px;
 }
 #about {
