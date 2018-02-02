@@ -1,8 +1,12 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
-  margin: 0;
+  margin: 0 0 40px;
 }
 h1 {
   color: gray;
@@ -50,7 +54,10 @@ a:hover {
   color: #FFCA6C !important;
 }
 .container-fluid {
+  min-height: 100%;
   padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 .footer {
   position: absolute;
@@ -62,5 +69,5 @@ a:hover {
 #footer-p {
   text-align: center;
   color: white;
-  margin-top: 5px;
+  margin-top: 12px;
 }
