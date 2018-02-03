@@ -73,11 +73,14 @@ a:hover {
   padding-top: 50px;
   padding-left: 16px;
 }
-.page-links, .show-page{
+.page-links, .show-page {
   padding-left: 16px;
 }
 .show-page {
   padding-top: 50px;
+}
+.panel .panel-default .panel-body p {
+  color: black;
 }
 .btn {
   background: black;
