@@ -22,7 +22,14 @@
       <div class="nav-right">
         <ul>
           <li id="about"><%= link_to "About", 'simple_pages/about' %></li>
-          <li><%= link_to "Contact", 'simple_pages/contact' %></li>
+          <li id="contact"><%= link_to "Contact", 'simple_pages/contact' %></li>
+          <li id="search">
+            <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+              <%#= form.label :q, 'Search for:' %>
+              <%= form.text_field :q, id: 'q', value: params[:q] %>
+              <%= form.submit 'Search' %>
+            <% end %>
+          </li>
         </ul>
       </div>
     </nav>
