@@ -17,29 +17,48 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Bike Berlin</a>
-      <div class="nav-right">
-        <ul>
-          <li id="about"><%= link_to "About", 'simple_pages/about' %></li>
-          <li id="contact"><%= link_to "Contact", 'simple_pages/contact' %></li>
-          <li id="search">
-            <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-              <%#= form.label :q, 'Search for:' %>
-              <%= form.text_field :q, id: 'q', value: params[:q] %>
-              <%= form.submit 'Search' %>
+    <!--<div id="container">-->
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"><h4>Bike Berlin</h4></a>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "About", 'simple_pages/about' %>
+          </li><!--/li .nav-item .active-->
+          <li class="nav-item">
+            <%= link_to "Contact", 'simple_pages/contact' %>
+          </li><!--/li .nav-item-->
+          <li class="nav-item">
+            <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+            <% else %>
+            <%= link_to('Login', new_user_session_path) %>
             <% end %>
-          </li>
-        </ul>
-      </div>
-    </nav>
+          </li><!--/li .nav-item-->
+        </ul><!--/ul .navbar-nav mr-auto-->
+        <form class="form-inline mt-2 mt-md-0">
+          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+          <%= form.text_field :q, id: 'q', value: params[:q] %>
+          <button class="btn btn-online-success">
+            <%= form.submit 'Search' %>
+          </button>
+          <% end %>
+        </form><!--/form .form-inline .mt-2 .mt-md-0-->
+      </div><!--/div .collapse navbar-collapse #navbarCollapse-->
+    </nav><!--/nav .navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse-->
+              <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
 
-  <%= yield %>
+    <%= yield %>
 
     <footer class="footer">
       <div class="container">
         <p id="footer-p">&copy Bike Berlin 2018. All Rights Reserved.</p>
       </div>
     </footer>
+      <!--</div>--><!--/.container-->
   </body>
 </html>
