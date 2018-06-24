@@ -1,4 +1,4 @@
-class RegistrationsController < Devise::UserRegistrationsController
+class RegistrationsController < Devise::RegistrationsController
   def create
     super
     if @user.persisted?
