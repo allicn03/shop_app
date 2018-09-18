@@ -153,6 +153,14 @@ html, body {
  height: auto;
  transform: translate(-50%, -50%);
 }
+
+.jumbotron-text {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  margin-left: 312px;
+  margin-top: 100px;
+}
 .container {
   background: black;
   background: rgba(0,0,0,0);
@@ -169,11 +177,17 @@ form {
   margin: 0;
   margin-left: 55px;
 }
+#h1-about {
+  margin-top: 10px;
+}
 .h1-form {
   color: black;
 }
 .h1-login {
   color: #FFEF84;
+}
+.devise-shared-links {
+  padding-left: 620px;
 }
 .form-group {
   color: #39FF14;
@@ -249,8 +263,11 @@ h2 {
   color: #39FF14;
   z-index: 10;
 }
+.content-container {
+  background-color: gray;
+}
 .product-description>p {
-  color: white;
+  color: black;
   padding-left: 16px;
   text-align: center;
 }
@@ -295,9 +312,9 @@ img {
   background-color: black;
   margin-top: 200px;
 }
-/*.left-column>h1 {
-  margin-top: 200px;
-}*/
+#col-md-4-about {
+  background-color: #F2F0F2;
+}
 .col-md-6 {
 height: 100vh;
 }
@@ -324,12 +341,15 @@ label {
   padding: 150px;
   padding-left: 250px;
 }
+.product-show-page {
+  padding-top: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: gray;
+}
 .show-page>p {
   color: white;
 }
-/*.description > h2 {
-  color: black;
-}*/
 .comment {
   color: white;
 }
@@ -363,6 +383,9 @@ img {
 .fa-trash {
   font-size: 20px;
   color: white
+}
+.login-button {
+  float: left;
 }
 .footer {
   position: absolute;
