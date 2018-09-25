@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!
-  load_and_authorize_resource
+    before_action :authenticate_user!
+    load_and_authorize_resource
   # GET /users
   # GET /users.json
   def index
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    #@user = User.find(params[:id]) |test|
+    @user = User.find(params[:id]) |test|
   end
 
   # GET /users/new
@@ -21,8 +21,19 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user = User.find(params[:id])
   end
 
+    def update_password
+      @user = current_user
+      if @user.update(user_params)
+        # Sign in the user by passing validation in case their password changed
+        bypass_sign_in(@user)
+        redirect_to root_path
+      else
+        render "edit"
+      end
+    end
   # POST /users
   # POST /users.json
   def create
@@ -30,7 +41,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        raise
+        #raise
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
