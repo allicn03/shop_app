@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find(params[:id])
     @comments = @product.comments.order("created_at DESC").paginate(page: params[:page], per_page: 3)
   end
 
@@ -25,6 +26,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @product = Product.find(params[:id])
   end
 
   # POST /products
@@ -48,8 +50,8 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        #format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-        format.html { redirect_to "/simple_pages/landing_page", notice: 'Product was successfully updated'}
+        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+        #format.html { redirect_to "/simple_pages/landing_page", notice: 'Product was successfully updated'}
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
@@ -78,5 +80,4 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :colour, :price)
     end
-
 end
