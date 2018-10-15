@@ -11,3 +11,24 @@ th {
 td {
   color: white;
 }
+.h2-password {
+  text-align: center;
+  margin-top: 100px;
+  color: red;
+}
+#new-password-input {
+  color: white;
+  margin-left: 500px;
+  padding-top: 50px;
+}
+#new-password-input>label {
+  padding-right: 25px;
+}
+#new-password-action {
+  margin-left: 500px;
+  padding-top: 25px;
+}
+#new-password-action>input {
+  background-color: green;
+  color: white;
+}
