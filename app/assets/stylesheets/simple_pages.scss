@@ -173,6 +173,9 @@ html, body {
 form {
   margin-top: 0;
 }
+/*#h1-landing-page {
+  padding-top: 10px;
+}*/
 .about {
   margin: 0;
   margin-left: 55px;
@@ -271,9 +274,18 @@ h2 {
   padding-left: 16px;
   text-align: center;
 }
-.carousel-inner {
+/*.carousel-inner {
   margin-left: 390px;
   margin-top: 50px;
+}*/
+.carousel,
+.item,
+.active {
+    height: 100%;
+    margin-bottom: 60px;
+}
+.carousel-inner {
+    height: 100%;
 }
 h4 {
   text-align: center;
