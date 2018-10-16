@@ -28,8 +28,7 @@
             <div class="rated" data-score="<%= @product.highest_rating_comment.rating %>">
             </div><!-- end /.rated-->
             <span><%= @product.highest_rating_comment.user.first_name %></span>
-            <span><small><em> <%= "#{time_ago_in_words(@product.highest_rating_comment.created_at)} ago" %></em></small></span>
-            <p><%= @product.highest_rating_comment.body %></p>
+            <span><small><em> <%= "#{time_ago_in_words(@product.highest_rating_comment.created_at)} ago" %></em></small><p><%= @product.highest_rating_comment.body %></p></span>
           </div><!--end /.highest-rating-->
           <% end %><!--end erb highest_rating_comment-->
           <!--Comments-->
