@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
+  devise_scope :user do
+    get 'users/:id' => 'users#show', as: :user
+  end
   resources :orders, only: [:index, :show, :create, :destroy]
   get 'simple_pages/test'
   get 'simple_pages/about'
