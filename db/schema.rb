@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20180226012025) do
     t.integer "price"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade do |t| #:cascade (switched with true)
     t.string "first_name"
     t.string "last_name"
     t.datetime "created_at", null: false
