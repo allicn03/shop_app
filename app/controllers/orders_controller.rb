@@ -5,6 +5,8 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @order = Order.find(params[:id])
+    redirect_to "/app/views/products"
   end
 
   def new
