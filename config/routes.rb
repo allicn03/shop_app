@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  devise_scope :user do
-    get 'users/:id' => 'users#show', as: :user
-  end
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}, controllers: { registrations: "user_registrations" }
   resources :users
   resources :products do
