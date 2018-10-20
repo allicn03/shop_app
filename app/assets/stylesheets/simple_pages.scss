@@ -173,9 +173,6 @@ html, body {
 form {
   margin-top: 0;
 }
-/*#h1-landing-page {
-  padding-top: 10px;
-}*/
 .about {
   margin: 0;
   margin-left: 55px;
@@ -232,10 +229,6 @@ a {
   padding-right: 12px;
   max-height: 40px;
 }
-/*a:hover {
-  text-decoration: none;
-  color: #39FF14;
-}*/
 a:visited {
   text-decoration: none;
   color: silver;
@@ -274,18 +267,11 @@ h2 {
   padding-left: 16px;
   text-align: center;
 }
-/*.carousel-inner {
-  margin-left: 390px;
-  margin-top: 50px;
-}*/
-/*.carousel,
-.item,
-.active {
-    height: 100%;
-    margin-bottom: 60px;
-}*/
 .carousel-inner {
     height: 100%;
+}
+.carousel-item>.img-responsive {
+  border-radius: 0;
 }
 h4 {
   text-align: center;

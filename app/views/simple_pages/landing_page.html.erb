@@ -1,4 +1,4 @@
-<h1 id="h1-landing-page">Featured Products</h1>
+<!-- <h1 id="h1-landing-page">Featured Products</h1> -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -8,7 +8,7 @@
   <div class="carousel-inner">
     <% @products.each do |product| %>
     <div class="carousel-item<%= " active" if product ==@products.first %>">
-      <%= image_tag(product.image_url) %>
+      <%= image_tag(product.image_url, class: "img-responsive") %>
     </div>
       <div class="carousel-caption">
         <h4><<%= product.name %></h4>
