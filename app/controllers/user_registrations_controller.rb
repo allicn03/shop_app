@@ -4,6 +4,5 @@ class UserRegistrationsController < Devise::RegistrationsController
     if @user.persisted?
       UserMailer.welcome(@user).deliver_now
     end
-
   end
 end
