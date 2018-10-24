@@ -17,6 +17,8 @@
   </head>
 
   <body>
+    <%= render 'layouts/alerts' %>
+
     <!--<div id="container">-->
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +38,7 @@
             <%= link_to "Contact", simple_pages_contact_path %>
           </li><!--/li .nav-item-->
         </ul>
+
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
           <li class="nav-item">
@@ -46,8 +49,8 @@
             <%= link_to('Login', new_user_session_path, class: "nav-link") %>
           </li>
           <% end %>
-          </li><!--/li .nav-item-->
-        </ul><!--/ul .navbar-nav mr-auto-->
+
+       </ul><!--/ul .navbar-nav mr-auto-->
         <form class="form-inline mt-2 mt-md-0">
           <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
             <%= form.label :q, 'Search for:' %>
@@ -59,11 +62,10 @@
         </form><!--/form .form-inline .mt-2 .mt-md-0-->
       </div><!--/div .collapse navbar-collapse #navbarCollapse-->
     </nav><!--/nav .navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse-->
-    <div>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    <div>
-      <% if notice %>
+    <!-- <div> -->
+
+    <!-- <div> -->
+      <!-- <% if notice %>
         <p id="notice" class="alert alert-info"><%= notice %></p>
       <% end %>
     </div>
@@ -71,7 +73,7 @@
       <% if notice %>
         <p id="alert" class="alert alert-info"><%= alert %></p>
       <% end %>
-    </div>
+    </div> -->
 
     <%= yield %>
 
