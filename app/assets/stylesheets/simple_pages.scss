@@ -139,6 +139,13 @@ html, body {
     margin-top: 0;
   }
 }
+
+.alert {
+  color: red;
+  z-index: 1;
+  padding-top: 40px;
+  text-align: center;
+}
 .jumbotron {
   height: 100vh;
 }
